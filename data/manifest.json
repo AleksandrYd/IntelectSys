@@ -1,0 +1,20 @@
+{
+  "digits": {
+    "source": "scikit-learn",
+    "version": "1.9.1",
+    "loader": "sklearn.datasets.load_digits",
+    "n_total": 1797,
+    "split_seed": 0,
+    "rule": "Сначала test_size=0.2 от всей выборки, затем val_size=0.25 от остатка. Оба вызова train_test_split стратифицированы по классу, random_state=0. Индексы в каждой части отсортированы.",
+    "n_train": 1077,
+    "n_val": 360,
+    "n_test": 360,
+    "n_excluded": 0,
+    "files": {
+      "data/split.json": {
+        "sha256": "bd21ec6607d5d36ea2918e5a875493bd518a351d236330d46e44623ac7ea39e6",
+        "n_records": 1797
+      }
+    }
+  }
+}

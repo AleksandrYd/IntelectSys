@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+
+runs/
+mlartifacts/
+mlflow.db
+optuna.db
