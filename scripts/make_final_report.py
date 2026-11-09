@@ -60,11 +60,18 @@ study = optuna.load_study(
     storage="sqlite:///" + (ROOT / "optuna.db").resolve().as_posix(),
 )
 base_val = []
-for run_dir in (ROOT / "runs").iterdir():
-    metadata = json.loads((run_dir / "metadata.json").read_text(encoding="utf-8"))
-    if metadata.get("series") == "base_seeds" and metadata.get("status") == "completed":
-        metrics = json.loads((run_dir / "metrics.json").read_text(encoding="utf-8"))
-        base_val.append(metrics["val_acc"])
+base_dirs = [ROOT / "runs", ROOT / "Эксперимент 1.2 1.3" / "runs"]
+for runs_dir in base_dirs:
+    if not runs_dir.exists():
+        continue
+    for run_dir in runs_dir.iterdir():
+        metadata_path = run_dir / "metadata.json"
+        if not metadata_path.exists():
+            continue
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        if metadata.get("series") == "base_seeds" and metadata.get("status") == "completed":
+            metrics = json.loads((run_dir / "metrics.json").read_text(encoding="utf-8"))
+            base_val.append(metrics["val_acc"])
 
 summary = {
     "deltas": deltas,
