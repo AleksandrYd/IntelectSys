@@ -1,0 +1,11 @@
+{
+  "n_trials": 40,
+  "counts": {
+    "COMPLETE": 22,
+    "PRUNED": 18
+  },
+  "epochs_done": 753,
+  "epochs_budget": 1200,
+  "median_epoch_s": 0.4399539000005461,
+  "time_saved_s": 196.65939330024412
+}

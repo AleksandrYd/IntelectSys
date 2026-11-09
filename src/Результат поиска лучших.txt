@@ -1,0 +1,3 @@
+(.venv) PS C:\Users\NoFi\Desktop\инженерноеобразование\Мага\интеллектуальные системы\практика> python -c "import optuna; s=optuna.load_study(study_name='lr0_search', storage='sqlite:///optuna.db'); print(s.best_trial.number, s.best_value); print(s.best_params)"
+11 0.9805555555555555
+{'lr': 0.00289204272998777, 'n_layers': 3, 'hidden': 289, 'dropout': 0.09765972692147486, 'weight_decay': 1.0484348865324308e-06, 'batch_size': 128}
