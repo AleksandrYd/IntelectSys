@@ -225,3 +225,6 @@ runs/
 mlartifacts/
 mlflow.db
 optuna.db
+.cursor
+00_course_rules.pdf
+.gitignore
